@@ -19,7 +19,9 @@
     "verify": "node scripts/verify.mjs",
     "astro": "astro",
     "prepare": "node scripts/wire-hooks.mjs",
-    "postinstall": "node scripts/ci-env.mjs postinstall"
+    "postinstall": "node scripts/ci-env.mjs postinstall",
+    "deploy:live": "wrangler deploy --config workers.jsonc",
+    "deploy:preview": "wrangler preview --config workers.jsonc"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
