@@ -20,7 +20,9 @@ if (!sha) {
     sha = 'dev';
   }
 }
-writeFileSync('dist/build.txt', sha + '\n');
+// Rehearsal (row 0.3): a second line names the platform that built it, so a probe can tell them apart.
+const platform = process.env.CF_PAGES ? 'pages' : process.env.WORKERS_CI ? 'workers-builds' : 'local';
+writeFileSync('dist/build.txt', `${sha}\nplatform=${platform}\n`);
 console.log(`build marker: dist/build.txt = ${sha.slice(0, 12)}`);
 
 if (process.env.SITE_TEST_BUILD) {
