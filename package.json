@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/ci-env.mjs build && astro build && node scripts/anchor-ids.mjs && node scripts/build-marker.mjs",
+    "build": "astro build && node scripts/anchor-ids.mjs && node scripts/build-marker.mjs",
     "preview": "astro preview",
     "og": "node scripts/run_og.mjs",
     "ship": "bash scripts/ship.sh",
@@ -19,7 +19,6 @@
     "verify": "node scripts/verify.mjs",
     "astro": "astro",
     "prepare": "node scripts/wire-hooks.mjs",
-    "postinstall": "node scripts/ci-env.mjs postinstall",
     "deploy:live": "wrangler deploy --config workers.jsonc",
     "deploy:preview": "wrangler preview --config workers.jsonc"
   },
