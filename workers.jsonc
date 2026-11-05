@@ -5,8 +5,5 @@
   "preview_urls": true,
   "previews": {},
   "assets": { "directory": "./dist", "not_found_handling": "404-page" },
-  "routes": [
-    { "pattern": "webcroft.dev", "custom_domain": true },
-    { "pattern": "www.webcroft.dev", "custom_domain": true }
-  ]
+  "routes": []
 }
