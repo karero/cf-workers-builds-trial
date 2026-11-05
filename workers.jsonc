@@ -4,5 +4,9 @@
   "workers_dev": false,           // off from A8 (doc step 1)
   "preview_urls": true,
   "previews": {},
-  "assets": { "directory": "./dist", "not_found_handling": "404-page" }
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
+  "routes": [
+    { "pattern": "webcroft.dev", "custom_domain": true },
+    { "pattern": "www.webcroft.dev", "custom_domain": true }
+  ]
 }
